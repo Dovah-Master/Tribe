@@ -36,13 +36,13 @@ public class Window extends JPanel {
 
     // fieldMap[500][140]
     public void drawMap(Graphics g2d) {
-        for(int i = 0; i < field.fieldMap.length; i++) { // i is 500, field.fieldMap.length = 500
-            for(int j = 0; j < field.fieldMap[0].length; j++) { // j is 140, field.fieldMap[0].length = 140
+        for(int i = 0; i < field.landMap.length; i++) { // i is 500, field.fieldMap.length = 500
+            for(int j = 0; j < field.landMap[0].length; j++) { // j is 140, field.fieldMap[0].length = 140
                 // MUST stay [i][j] otherwise graphics rotates the map
-                if(field.fieldMap[i][j] == 5) {
+                if(field.landMap[i][j] == 5) {
                     g2d.setColor(LAND);
                     g2d.fillRect(i * squareSize, j * squareSize, squareSize, squareSize);
-                } if(field.fieldMap[i][j] == 1) {
+                } if(field.landMap[i][j] == 1) {
                     g2d.setColor(Color.BLUE);
                     g2d.fillRect(i * squareSize, j * squareSize, squareSize, squareSize);
                 } else {
@@ -54,8 +54,8 @@ public class Window extends JPanel {
         }
     }
     public void drawMember(Graphics g2d) {
-        for(int i = 0; i < field.fieldMap.length; i++) { // i is 500, all maps will be 500x280
-            for (int j = 0; j < field.fieldMap[0].length; j++) { // j is 140
+        for(int i = 0; i < field.landMap.length; i++) { // i is 500, all maps will be 500x280
+            for (int j = 0; j < field.landMap[0].length; j++) { // j is 140
                 if(member.memberMap[i][j] == 1) {
                     g2d.setColor(Color.RED);
                     g2d.fillRect(i * squareSize, j * squareSize, squareSize, squareSize);

@@ -3,12 +3,12 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Map {
-    static int[][] fieldMap;
+    static int[][] landMap;
     int mapWidth = 500;
     int mapHeight = 280;
 
     public void fieldMapData(int w, int h) {
-        this.fieldMap = new int[w][h];
+        this.landMap = new int[w][h];
     }
 
     public void getMapField() {
@@ -34,11 +34,11 @@ public class Map {
                     c = '.';
                 }
 
-                fieldMap[i][j] = ( c == '0')? 5 : 1;
+                landMap[i][j] = ( c == '0')? 5 : 1;
             }
         }
     }
     public static boolean testMemberPlacement(int x, int y) {
-        return fieldMap[x][y] == 5;
+        return landMap[x][y] == 5;
     }
 }
