@@ -15,9 +15,8 @@ public class Window extends JPanel {
         this.field = new Map();
         this.field.getMapField();
         this.member = new Member();
-        this.member.memberPlacement();
 
-        this._timer = new Timer(300, (e) -> {
+        this._timer = new Timer(100, (e) -> {
             this.paintInterval();
         });
         this._timer.start();
@@ -55,7 +54,7 @@ public class Window extends JPanel {
     }
     public void drawMember(Graphics g2d) {
         for(int i = 0; i < field.landMap.length; i++) { // i is 500, all maps will be 500x280
-            for (int j = 0; j < field.landMap[0].length; j++) { // j is 140
+            for (int j = 0; j < field.landMap[0].length; j++) { // j is 280
                 if(member.memberMap[i][j] == 1) {
                     g2d.setColor(Color.RED);
                     g2d.fillRect(i * squareSize, j * squareSize, squareSize, squareSize);

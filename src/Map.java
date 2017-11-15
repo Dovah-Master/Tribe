@@ -29,7 +29,7 @@ public class Map {
                 char c;
                 // how do try catches work? learn tomorrow
                 try {
-                   c=  a.charAt(i);
+                   c = a.charAt(i);
                 } catch (Exception e){
                     c = '.';
                 }
